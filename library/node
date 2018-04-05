@@ -5,32 +5,32 @@ GitRepo: https://github.com/nodejs/docker-node.git
 
 Tags: 9.10.1, 9.10, 9, latest
 Architectures: amd64, ppc64le, s390x, arm64v8, arm32v7, i386
-GitCommit: d5badac9d19e01d12d446a556c344aba66ed6b96
+GitCommit: 428ae371d2bae127c6e6772049e71e7961c48ecd
 Directory: 9
 
 Tags: 9.10.1-alpine, 9.10-alpine, 9-alpine, alpine
 Architectures: amd64, ppc64le, s390x, arm64v8, arm32v6, i386
-GitCommit: d5badac9d19e01d12d446a556c344aba66ed6b96
+GitCommit: 428ae371d2bae127c6e6772049e71e7961c48ecd
 Directory: 9/alpine
 
 Tags: 9.10.1-onbuild, 9.10-onbuild, 9-onbuild, onbuild
 Architectures: amd64, ppc64le, s390x, arm64v8, arm32v7, i386
-GitCommit: d5badac9d19e01d12d446a556c344aba66ed6b96
+GitCommit: 428ae371d2bae127c6e6772049e71e7961c48ecd
 Directory: 9/onbuild
 
 Tags: 9.10.1-slim, 9.10-slim, 9-slim, slim
 Architectures: amd64, ppc64le, s390x, arm64v8, arm32v7, i386
-GitCommit: d5badac9d19e01d12d446a556c344aba66ed6b96
+GitCommit: 428ae371d2bae127c6e6772049e71e7961c48ecd
 Directory: 9/slim
 
 Tags: 9.10.1-stretch, 9.10-stretch, 9-stretch, stretch
 Architectures: amd64, ppc64le, s390x, arm64v8, arm32v7, i386
-GitCommit: d5badac9d19e01d12d446a556c344aba66ed6b96
+GitCommit: 428ae371d2bae127c6e6772049e71e7961c48ecd
 Directory: 9/stretch
 
 Tags: 9.10.1-wheezy, 9.10-wheezy, 9-wheezy, wheezy
 Architectures: amd64
-GitCommit: d5badac9d19e01d12d446a556c344aba66ed6b96
+GitCommit: 428ae371d2bae127c6e6772049e71e7961c48ecd
 Directory: 9/wheezy
 
 Tags: 8.11.1, 8.11, 8, carbon
