@@ -1,4 +1,4 @@
-# this file is generated via https://github.com/nodejs/docker-node/blob/bb92568f3a1db52519b88c5eebfa9f7af94eb1e0/generate-stackbrew-library.sh
+# this file is generated via https://github.com/nodejs/docker-node/blob/fb8ac15c9c606e15cd7f37074d62061c39d1a6cb/generate-stackbrew-library.sh
 
 Maintainers: The Node.js Docker Team <https://github.com/nodejs/docker-node> (@nodejs)
 GitRepo: https://github.com/nodejs/docker-node.git
@@ -103,7 +103,7 @@ Architectures: amd64
 GitCommit: 947280600648b70e067d35415d6812fd03127def
 Directory: chakracore/8
 
-Tags: chakracore-10.0.0, chakracore-10.0, chakracore-10, chakracore
+Tags: chakracore-10.1.0, chakracore-10.1, chakracore-10, chakracore
 Architectures: amd64
-GitCommit: 947280600648b70e067d35415d6812fd03127def
+GitCommit: 384512d45794367e0da3c4721559ae9e9ce9412e
 Directory: chakracore/10
