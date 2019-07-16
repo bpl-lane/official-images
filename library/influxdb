@@ -1,29 +1,60 @@
-Maintainers: Jonathan A. Sternberg <jonathan@influxdb.com> (@jsternberg)
+Maintainers: Jonathan A. Sternberg <jonathan@influxdata.com> (@jsternberg)
 GitRepo: git://github.com/influxdata/influxdata-docker
-GitCommit: f476f43da3991c51ac5e4fc9ab2d9bc2dd612bee
+GitCommit: df5692d3ebc883fee52ede21bb75749174f8b0a5
 
-Tags: 1.4, 1.4.3
-Architectures: amd64, arm32v7, arm64v8
-Directory: influxdb/1.4
-
-Tags: 1.4-alpine, 1.4.3-alpine
-Directory: influxdb/1.4/alpine
-
-Tags: 1.5, 1.5.1, latest
+Tags: 1.5, 1.5.4
 Architectures: amd64, arm32v7, arm64v8
 Directory: influxdb/1.5
 
-Tags: 1.5-alpine, 1.5.1-alpine, alpine
+Tags: 1.5-alpine, 1.5.4-alpine
 Directory: influxdb/1.5/alpine
 
-Tags: 1.5-data, 1.5.1-data, data
+Tags: 1.5-data, 1.5.4-data
 Directory: influxdb/1.5/data
 
-Tags: 1.5-data-alpine, 1.5.1-data-alpine, data-alpine
+Tags: 1.5-data-alpine, 1.5.4-data-alpine
 Directory: influxdb/1.5/data/alpine
 
-Tags: 1.5-meta, 1.5.1-meta, meta
+Tags: 1.5-meta, 1.5.4-meta
 Directory: influxdb/1.5/meta
 
-Tags: 1.5-meta-alpine, 1.5.1-meta-alpine, meta-alpine
+Tags: 1.5-meta-alpine, 1.5.4-meta-alpine
 Directory: influxdb/1.5/meta/alpine
+
+Tags: 1.6, 1.6.6
+Architectures: amd64, arm32v7, arm64v8
+Directory: influxdb/1.6
+
+Tags: 1.6-alpine, 1.6.6-alpine
+Directory: influxdb/1.6/alpine
+
+Tags: 1.6-data, 1.6.6-data
+Directory: influxdb/1.6/data
+
+Tags: 1.6-data-alpine, 1.6.6-data-alpine
+Directory: influxdb/1.6/data/alpine
+
+Tags: 1.6-meta, 1.6.6-meta
+Directory: influxdb/1.6/meta
+
+Tags: 1.6-meta-alpine, 1.6.6-meta-alpine
+Directory: influxdb/1.6/meta/alpine
+
+Tags: 1.7, 1.7.6, latest
+Architectures: amd64, arm32v7, arm64v8
+Directory: influxdb/1.7
+
+Tags: 1.7-alpine, 1.7.6-alpine, alpine
+Directory: influxdb/1.7/alpine
+
+Tags: 1.7-data, 1.7.5-data, data
+Directory: influxdb/1.7/data
+
+Tags: 1.7-data-alpine, 1.7.5-data-alpine, data-alpine
+Directory: influxdb/1.7/data/alpine
+
+Tags: 1.7-meta, 1.7.5-meta, meta
+Directory: influxdb/1.7/meta
+
+Tags: 1.7-meta-alpine, 1.7.5-meta-alpine, meta-alpine
+Directory: influxdb/1.7/meta/alpine

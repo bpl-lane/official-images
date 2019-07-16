@@ -8,12 +8,22 @@ import (
 	"text/template"
 
 	"github.com/codegangsta/cli"
+	"github.com/docker-library/go-dockerlibrary/manifest"
 	"github.com/docker-library/go-dockerlibrary/pkg/templatelib"
 )
 
 var DefaultCatFormat = `
-{{- if i }}{{ "\n\n" }}{{ end -}}
-{{- .TagName | ternary (.Manifest.GetTag .TagName) .Manifest -}}
+{{- if i -}}
+	{{- "\n\n" -}}
+{{- end -}}
+{{- with .TagEntries -}}
+	{{- range $i, $e := . -}}
+		{{- if $i -}}{{- "\n\n" -}}{{- end -}}
+		{{- $e -}}
+	{{- end -}}
+{{- else -}}
+	{{- .Manifest -}}
+{{- end -}}
 `
 
 func cmdCat(c *cli.Context) error {
@@ -48,6 +58,33 @@ func cmdCat(c *cli.Context) error {
 		"archNamespace": func(arch string) string {
 			return archNamespaces[arch]
 		},
+		"archFilter": func(arch string, entriesArg ...interface{}) []manifest.Manifest2822Entry {
+			if len(entriesArg) < 1 {
+				panic(`"archFilter" requires at least one argument`)
+			}
+			entries := []manifest.Manifest2822Entry{}
+			for _, entryArg := range entriesArg {
+				switch v := entryArg.(type) {
+				case []*manifest.Manifest2822Entry:
+					for _, e := range v {
+						entries = append(entries, *e)
+					}
+				case []manifest.Manifest2822Entry:
+					entries = append(entries, v...)
+				case manifest.Manifest2822Entry:
+					entries = append(entries, v)
+				default:
+					panic(fmt.Sprintf(`"archFilter" encountered unknown type: %T`, v, v))
+				}
+			}
+			filtered := []manifest.Manifest2822Entry{}
+			for _, entry := range entries {
+				if entry.HasArchitecture(arch) {
+					filtered = append(filtered, entry)
+				}
+			}
+			return filtered
+		},
 	}).Parse(format)
 	if err != nil {
 		return cli.NewMultiError(tmplMultiErr, err)
@@ -63,7 +100,7 @@ func cmdCat(c *cli.Context) error {
 		buf := &bytes.Buffer{}
 		err = tmpl.ExecuteTemplate(buf, templateName, r)
 		if err != nil {
-			return cli.NewMultiError(fmt.Errorf(`failed executing template`), err)
+			return cli.NewMultiError(fmt.Errorf(`failed executing template for repo %q`, repo), err)
 		}
 		out := buf.String()
 		fmt.Print(out)

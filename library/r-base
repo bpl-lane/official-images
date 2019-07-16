@@ -1,5 +1,8 @@
-# maintainer: "Carl Boettiger" <rocker-maintainers@eddelbuettel.com> (@cboettig)
-# maintainer: "Dirk Eddelbuettel" <rocker-maintainers@eddelbuettel.com> (@eddelbuettel)
+Maintainers: Carl Boettiger <rocker-maintainers@eddelbuettel.com> (@cboettig),
+             Dirk Eddelbuettel <rocker-maintainers@eddelbuettel.com> (@eddelbuettel)
+GitRepo: https://github.com/rocker-org/rocker.git
 
-3.4.4: git://github.com/rocker-org/rocker@151274f9052f874034489769b94eba834309dc5d r-base
-latest: git://github.com/rocker-org/rocker@151274f9052f874034489769b94eba834309dc5d r-base
+Tags: 3.6.0, latest
+Architectures: amd64, arm64v8
+GitCommit: 81766dfd355860d733d1cac98f583c2f3aa430ac
+Directory: r-base

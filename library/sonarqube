@@ -1,15 +1,11 @@
-Maintainers: Evgeny Mandrikov <mandrikov@gmail.com> (@Godin)
+Maintainers: Janos Gyerik <janos.gyerik@sonarsource.com> (@janos-ss),
+             Julien Lancelot <julien.lancelot@sonarsource.com> (@julienlancelot),
+             Christophe Levis <christophe.levis@sonarsource.com> (@christophelevis)
 GitRepo: https://github.com/SonarSource/docker-sonarqube.git
-GitCommit: faffed54f0edbd736d6f95132b5dc076e2f613c5
+GitCommit: abaf14c38297974eb5de295d42e83066ddb84751
 
-Tags: 6.7.2, lts
-Directory: 6.7.2
+Tags: 6.7.7-community, 6.7-community, lts
+Directory: 6.7.7-community
 
-Tags: 6.7.2-alpine, lts-alpine
-Directory: 6.7.2-alpine
-
-Tags: 7.0, latest
-Directory: 7.0
-
-Tags: 7.0-alpine, alpine
-Directory: 7.0-alpine
+Tags: 7.7-community, latest
+Directory: 7.7-community

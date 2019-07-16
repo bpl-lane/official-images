@@ -1,12 +1,13 @@
 Maintainers: Adam Miller <maxamillion@fedoraproject.org> (@maxamillion),
-             Patrick Uiterwijk <puiterwijk@gmail.com> (@puiterwijk)
+             Patrick Uiterwijk <puiterwijk@gmail.com> (@puiterwijk),
+             Clement Verna <cverna@fedoraproject.org> (@cverna)
 GitRepo: https://github.com/fedora-cloud/docker-brew-fedora.git
 Constraints: !aufs
 
-Tags: latest, 27
+Tags: 27
 Architectures: amd64, arm32v7, arm64v8, ppc64le
 GitFetch: refs/heads/27
-GitCommit: 425644cb22f4f31db65671bb3df75de4ee5b9742
+GitCommit: e1796b2753d5a5731de5915661e4639c4342b950
 amd64-Directory: x86_64/
 arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
@@ -21,20 +22,40 @@ arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
 
-Tags: rawhide
-Architectures: amd64, arm32v7, arm64v8, ppc64le
-GitFetch: refs/heads/rawhide
-GitCommit: a3db183bc886c67e9e326b39c59b7ceda5c64aa4
+Tags: 30
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitFetch: refs/heads/30
+GitCommit: c18591956645cd49cd61c50b5f2309b20ff90f52
 amd64-Directory: x86_64/
-arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
 ppc64le-Directory: ppc64le/
+s390x-Directory: s390x/
 
-Tags: branched, 28
-Architectures: amd64, arm32v7, arm64v8, s390x
+Tags: 28
+Architectures: amd64, arm64v8, ppc64le, s390x, arm32v7
 GitFetch: refs/heads/28
-GitCommit: dee23ddc2f0c8bdfe8be0c37dd93ffec00cfa969
+GitCommit: aa106da2be30656a7ccb32b96f6788031ce8656f
 amd64-Directory: x86_64/
-arm32v7-Directory: armhfp/
 arm64v8-Directory: aarch64/
+ppc64le-Directory: ppc64le/
+s390x-Directory: s390x/
+arm32v7-Directory: armhfp/
+
+Tags: latest, 29
+Architectures: amd64, arm64v8, ppc64le, s390x, arm32v7
+GitFetch: refs/heads/29
+GitCommit: 4dbc2ccd3b4d52258981eaf12043025054d53023
+amd64-Directory: x86_64/
+arm64v8-Directory: aarch64/
+ppc64le-Directory: ppc64le/
+s390x-Directory: s390x/
+arm32v7-Directory: armhfp/
+
+Tags: rawhide, 31
+Architectures: amd64, arm64v8, ppc64le, s390x
+GitFetch: refs/heads/31
+GitCommit: c45a7cada7ad24775993044536701ba9b95f609f
+amd64-Directory: x86_64/
+arm64v8-Directory: aarch64/
+ppc64le-Directory: ppc64le/
 s390x-Directory: s390x/

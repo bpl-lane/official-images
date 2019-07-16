@@ -1,17 +1,24 @@
-Maintainers: Jonathan A. Sternberg <jonathan@influxdb.com> (@jsternberg)
+Maintainers: Jonathan A. Sternberg <jonathan@influxdata.com> (@jsternberg)
 GitRepo: git://github.com/influxdata/influxdata-docker
-GitCommit: d91d2c538832a2c27c0e8d33fac8308bf98466e1
+GitCommit: 56529df4a46eaac4a83c87d9f36f3ba328b4676a
 
-Tags: 1.4, 1.4.5
+Tags: 1.8, 1.8.3
 Architectures: amd64, arm32v7, arm64v8
-Directory: telegraf/1.4
+Directory: telegraf/1.8
 
-Tags: 1.4-alpine, 1.4.5-alpine
-Directory: telegraf/1.4/alpine
+Tags: 1.8-alpine, 1.8.3-alpine
+Directory: telegraf/1.8/alpine
 
-Tags: 1.5, 1.5.3, latest
+Tags: 1.9, 1.9.5
 Architectures: amd64, arm32v7, arm64v8
-Directory: telegraf/1.5
+Directory: telegraf/1.9
 
-Tags: 1.5-alpine, 1.5.3-alpine, alpine
-Directory: telegraf/1.5/alpine
+Tags: 1.9-alpine, 1.9.5-alpine
+Directory: telegraf/1.9/alpine
+
+Tags: 1.10, 1.10.4, latest
+Architectures: amd64, arm32v7, arm64v8
+Directory: telegraf/1.10
+
+Tags: 1.10-alpine, 1.10.4-alpine, alpine
+Directory: telegraf/1.10/alpine

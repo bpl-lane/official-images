@@ -1,22 +1,28 @@
-Maintainers: Bernd Dorn <bernddorn@gmail.com> (@dobe),
-             Mathias Fußenegger <mathias@crate.io> (@mfussenegger),
-             Matthias Wahl <matthias@crate.io> (@mfelsche),
+Maintainers: Christian Bader <christian.bader@crate.io> (@christianbader),
              Michael Beer <michael.beer@crate.io> (@mikethebeer),
+             Mathias Fußenegger <mathias@crate.io> (@mfussenegger),
              Christian Haudum <christian.haudum@crate.io> (@chaudum),
-             Ruslan Kovalov <ruslan@crate.io> (@kovrus),
-             Claus Matzinger <claus@crate.io> (@celaus),
-             Christian Bader <christian.bader@crate.io> (@christianbader),
              Mika Naylor <mika@crate.io> (@autophagy)
 GitRepo: https://github.com/crate/docker-crate.git
 
-Tags: 2.3.5, 2.3, latest
-GitCommit: e37979675005637e04e0394f1f30e024ec73187a
+Tags: 3.3.3, 3.3, latest
+Architectures: amd64, arm64v8
+GitCommit: 35706c08bd9aa13455b6f6259ca6e5dc386c3ec8
+
+Tags: 3.2.8, 3.2
+Architectures: amd64, arm64v8
+GitCommit: cd46c51f77fabac4abd60ca29f7da82faaaf2b5f
+
+Tags: 3.1.6, 3.1
+Architectures: amd64, arm64v8
+GitCommit: f15504034e1d0ea67d4517daec2ff4adf1435d65
+
+Tags: 3.0.7, 3.0
+GitCommit: ca1f030be8be51c126fa908400aa031be6eb0412
+
+Tags: 2.3.11, 2.3
+GitCommit: f15780fc923017c66040c4baf79f2efd506655ac
 
 Tags: 2.2.7, 2.2
 GitCommit: 771c9b60ffbb03c2692e09a2539c7411327d7e3d
 
-Tags: 2.1.10, 2.1
-GitCommit: ed8cda8b567628dd733716dc5c8f507512587783
-
-Tags: 2.0.7, 2.0
-GitCommit: 79d51bb263104ccd2d3c57a5d74c16d6f0466d21

@@ -72,7 +72,7 @@ git -C oi fetch --quiet \
 
 images=( "$@" )
 if [ "${#images[@]}" -eq 0 ]; then
-	images=( $(git -C oi/library diff --name-only master...pull -- . | xargs -n1 basename) )
+	images=( $(git -C oi/library diff --name-only HEAD...pull -- . | xargs -n1 basename) )
 fi
 
 export BASHBREW_CACHE="${BASHBREW_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/bashbrew}"
@@ -111,15 +111,16 @@ sharedTagsListTemplate='
 
 # TODO something less hacky than "git archive" hackery, like a "bashbrew archive" or "bashbrew context" or something
 template='
+	tempDir="$(mktemp -d)"
+	{{- "\n" -}}
 	{{- range $.Entries -}}
 		{{- $arch := .HasArchitecture arch | ternary arch (.Architectures | first) -}}
 		{{- $from := $.ArchDockerFrom $arch . -}}
+		{{- $outDir := join "_" $.RepoName (.Tags | last) -}}
 		git -C "$BASHBREW_CACHE/git" archive --format=tar
 		{{- " " -}}
 		{{- "--prefix=" -}}
-		{{- $.RepoName -}}
-		_
-		{{- .Tags | last -}}
+		{{- $outDir -}}
 		{{- "/" -}}
 		{{- " " -}}
 		{{- .ArchGitCommit $arch -}}
@@ -127,7 +128,10 @@ template='
 		{{- $dir := .ArchDirectory $arch -}}
 		{{- (eq $dir ".") | ternary "" $dir -}}
 		{{- "\n" -}}
+		mkdir -p "$tempDir/{{- $outDir -}}" && echo "{{- .ArchFile $arch -}}" > "$tempDir/{{- $outDir -}}/.bashbrew-dockerfile-name"
+		{{- "\n" -}}
 	{{- end -}}
+	tar -cC "$tempDir" . && rm -rf "$tempDir"
 '
 
 copy-tar() {
@@ -140,23 +144,37 @@ copy-tar() {
 		return
 	fi
 
-	# "Dockerfile*" at the end here ensures we capture "Dockerfile.builder" style repos in a useful way too (busybox, hello-world)
-	for d in "$src"/*/Dockerfile*; do
-		dDir="$(dirname "$d")"
-		dDirName="$(basename "$dDir")"
+	local d dockerfiles=()
+	for d in "$src"/*/.bashbrew-dockerfile-name; do
+		local bf="$(< "$d")" dDir="$(dirname "$d")"
+		if [ "$bf" = 'Dockerfile' ]; then
+			# "*" at the end here ensures we capture "Dockerfile.builder" style repos in a useful way too (busybox, hello-world)
+			dockerfiles+=( "$dDir/$bf"* )
+		else
+			dockerfiles+=( "$dDir/$bf" )
+		fi
+		rm "$d" # remove the ".bashbrew-dockerfile-name" file we created
+	done
+
+	for d in "${dockerfiles[@]}"; do
+		local dDir="$(dirname "$d")"
+		local dDirName="$(basename "$dDir")"
 
 		IFS=$'\n'
-		files=(
+		local files=(
 			"$(basename "$d")"
 			$(awk '
 				toupper($1) == "COPY" || toupper($1) == "ADD" {
 					for (i = 2; i < NF; i++) {
-						print $i
+						if ($i !~ /^--chown=/) {
+							print $i
+						}
 					}
 				}
 			' "$d")
 
 			# some extra files which are likely interesting if they exist, but no big loss if they do not
+			' .dockerignore' # will be used automatically by "docker build"
 			' *.manifest' # debian/ubuntu "package versions" list
 			' *.ks' # fedora "kickstart" (rootfs build script)
 			' build*.txt' # ubuntu "build-info.txt", debian "build-command.txt"
@@ -172,12 +190,21 @@ copy-tar() {
 
 		mkdir -p "$dst/$dDirName"
 
+		local f origF failureMatters
 		for origF in "${files[@]}"; do
 			f="${origF# }" # trim off leading space (indicates we don't care about failure)
 			[ "$f" = "$origF" ] && failureMatters=1 || failureMatters=
 
-			globbed=( $(cd "$dDir" && eval "echo $f") )
+			local globbed
+			# "find: warning: -path ./xxx/ will not match anything because it ends with /."
+			local findGlobbedPath="${f%/}"
+			findGlobbedPath="${findGlobbedPath#./}"
+			globbed=( $(cd "$dDir" && find -path "./$findGlobbedPath") )
+			if [ "${#globbed[@]}" -eq 0 ]; then
+				globbed=( "$f" )
+			fi
 
+			local g
 			for g in "${globbed[@]}"; do
 				if [ -z "$failureMatters" ] && [ ! -e "$dDir/$g" ]; then
 					continue
@@ -191,6 +218,7 @@ copy-tar() {
 						*.tar.*|*.tgz)
 							tar -tf "$dst/$dDirName/$g" \
 								| grep -vE "$uninterestingTarballGrep" \
+								| sed -e 's!^[.]/!!' \
 								| sort \
 								> "$dst/$dDirName/$g  'tar -t'"
 							;;
@@ -231,4 +259,13 @@ copy-tar tar temp
 rm -rf tar
 git -C temp add .
 
-git -C temp diff --minimal --find-copies="$findCopies" --find-copies-harder --irreversible-delete --staged
+git -C temp diff \
+	--find-copies-harder \
+	--find-copies="$findCopies" \
+	--find-renames="$findCopies" \
+	--ignore-blank-lines \
+	--ignore-space-at-eol \
+	--ignore-space-change \
+	--irreversible-delete \
+	--minimal \
+	--staged

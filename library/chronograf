@@ -1,17 +1,24 @@
-Maintainers: Jonathan A. Sternberg <jonathan@influxdb.com> (@jsternberg)
+Maintainers: Jonathan A. Sternberg <jonathan@influxdata.com> (@jsternberg)
 GitRepo: git://github.com/influxdata/influxdata-docker
-GitCommit: da4eceb318ee61d0bb5d00fc3fa1e87bde1f3cae
+GitCommit: df5692d3ebc883fee52ede21bb75749174f8b0a5
 
-Tags: 1.3, 1.3.10, 1.3.10.0
+Tags: 1.5, 1.5.0, 1.5.0.1
 Architectures: amd64, arm32v7, arm64v8
-Directory: chronograf/1.3
+Directory: chronograf/1.5
 
-Tags: 1.3-alpine, 1.3.10-alpine, 1.3.10.0-alpine
-Directory: chronograf/1.3/alpine
+Tags: 1.5-alpine, 1.5.0-alpine, 1.5.0.1-alpine
+Directory: chronograf/1.5/alpine
 
-Tags: 1.4, 1.4.3, 1.4.3.0, latest
+Tags: 1.6, 1.6.2
 Architectures: amd64, arm32v7, arm64v8
-Directory: chronograf/1.4
+Directory: chronograf/1.6
 
-Tags: 1.4-alpine, 1.4.3-alpine, 1.4.3.0-alpine, alpine
-Directory: chronograf/1.4/alpine
+Tags: 1.6-alpine, 1.6.2-alpine
+Directory: chronograf/1.6/alpine
+
+Tags: 1.7, 1.7.11, latest
+Architectures: amd64, arm32v7, arm64v8
+Directory: chronograf/1.7
+
+Tags: 1.7-alpine, 1.7.11-alpine, alpine
+Directory: chronograf/1.7/alpine

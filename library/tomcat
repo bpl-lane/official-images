@@ -1,115 +1,55 @@
-# this file is generated via https://github.com/docker-library/tomcat/blob/5d317a0a21e6c927e415dfc8dd452619ea4b4643/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/tomcat/blob/7eae995786f14b4e96010bcc11338724706e30eb/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/tomcat.git
 
-Tags: 7.0.85-jre7, 7.0-jre7, 7-jre7, 7.0.85, 7.0, 7
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 27c69186d320837884e9ed56db504b92e454f6d5
-Directory: 7/jre7
+Tags: 7.0.94-jdk8, 7.0-jdk8, 7-jdk8, 7.0.94, 7.0, 7
+Architectures: amd64
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 7/jdk8
 
-Tags: 7.0.85-jre7-slim, 7.0-jre7-slim, 7-jre7-slim, 7.0.85-slim, 7.0-slim, 7-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 27c69186d320837884e9ed56db504b92e454f6d5
-Directory: 7/jre7-slim
+Tags: 7.0.94-jdk8-slim, 7.0-jdk8-slim, 7-jdk8-slim, 7.0.94-slim, 7.0-slim, 7-slim
+Architectures: amd64
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 7/jdk8-slim
 
-Tags: 7.0.85-jre7-alpine, 7.0-jre7-alpine, 7-jre7-alpine, 7.0.85-alpine, 7.0-alpine, 7-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 85486f9d3edfa08a827037e556924b1aeb7069d9
-Directory: 7/jre7-alpine
+Tags: 8.5.41-jdk8, 8.5-jdk8, 8-jdk8, jdk8, 8.5.41, 8.5, 8, latest
+Architectures: amd64
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 8.5/jdk8
 
-Tags: 7.0.85-jre8, 7.0-jre8, 7-jre8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 27c69186d320837884e9ed56db504b92e454f6d5
-Directory: 7/jre8
+Tags: 8.5.41-jdk8-slim, 8.5-jdk8-slim, 8-jdk8-slim, jdk8-slim, 8.5.41-slim, 8.5-slim, 8-slim, slim
+Architectures: amd64
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 8.5/jdk8-slim
 
-Tags: 7.0.85-jre8-slim, 7.0-jre8-slim, 7-jre8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 27c69186d320837884e9ed56db504b92e454f6d5
-Directory: 7/jre8-slim
+Tags: 8.5.41-jdk11, 8.5-jdk11, 8-jdk11, jdk11
+Architectures: amd64, arm64v8
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 8.5/jdk11
 
-Tags: 7.0.85-jre8-alpine, 7.0-jre8-alpine, 7-jre8-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 85486f9d3edfa08a827037e556924b1aeb7069d9
-Directory: 7/jre8-alpine
+Tags: 8.5.41-jdk11-slim, 8.5-jdk11-slim, 8-jdk11-slim, jdk11-slim
+Architectures: amd64, arm64v8
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 8.5/jdk11-slim
 
-Tags: 8.0.50-jre7, 8.0-jre7, 8.0.50, 8.0
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: af4b04d13a880a81a73dc2936afdf44147144418
-Directory: 8.0/jre7
+Tags: 9.0.20-jdk8, 9.0-jdk8, 9-jdk8
+Architectures: amd64
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 9.0/jdk8
 
-Tags: 8.0.50-jre7-slim, 8.0-jre7-slim, 8.0.50-slim, 8.0-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: af4b04d13a880a81a73dc2936afdf44147144418
-Directory: 8.0/jre7-slim
+Tags: 9.0.20-jdk8-slim, 9.0-jdk8-slim, 9-jdk8-slim
+Architectures: amd64
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 9.0/jdk8-slim
 
-Tags: 8.0.50-jre7-alpine, 8.0-jre7-alpine, 8.0.50-alpine, 8.0-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 99e449dbecd64705dd81c07b8767ec67e706be41
-Directory: 8.0/jre7-alpine
+Tags: 9.0.20-jdk11, 9.0-jdk11, 9-jdk11, 9.0.20, 9.0, 9
+Architectures: amd64, arm64v8
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 9.0/jdk11
 
-Tags: 8.0.50-jre8, 8.0-jre8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: af4b04d13a880a81a73dc2936afdf44147144418
-Directory: 8.0/jre8
-
-Tags: 8.0.50-jre8-slim, 8.0-jre8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: af4b04d13a880a81a73dc2936afdf44147144418
-Directory: 8.0/jre8-slim
-
-Tags: 8.0.50-jre8-alpine, 8.0-jre8-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: 99e449dbecd64705dd81c07b8767ec67e706be41
-Directory: 8.0/jre8-alpine
-
-Tags: 8.5.29-jre8, 8.5-jre8, 8-jre8, jre8, 8.5.29, 8.5, 8, latest
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 2a3fd22cd52b4c1fd6b263b0a42cb371a83a74c5
-Directory: 8.5/jre8
-
-Tags: 8.5.29-jre8-slim, 8.5-jre8-slim, 8-jre8-slim, jre8-slim, 8.5.29-slim, 8.5-slim, 8-slim, slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 2a3fd22cd52b4c1fd6b263b0a42cb371a83a74c5
-Directory: 8.5/jre8-slim
-
-Tags: 8.5.29-jre8-alpine, 8.5-jre8-alpine, 8-jre8-alpine, jre8-alpine, 8.5.29-alpine, 8.5-alpine, 8-alpine, alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: cd46dd92802bc82fb544906ae8b0108996c5de65
-Directory: 8.5/jre8-alpine
-
-Tags: 8.5.29-jre9, 8.5-jre9, 8-jre9, jre9
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 2a3fd22cd52b4c1fd6b263b0a42cb371a83a74c5
-Directory: 8.5/jre9
-
-Tags: 8.5.29-jre9-slim, 8.5-jre9-slim, 8-jre9-slim, jre9-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 2a3fd22cd52b4c1fd6b263b0a42cb371a83a74c5
-Directory: 8.5/jre9-slim
-
-Tags: 9.0.6-jre8, 9.0-jre8, 9-jre8
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 84fc76939453c0bec4937ae8e6fe4f1ecc0d6d19
-Directory: 9.0/jre8
-
-Tags: 9.0.6-jre8-slim, 9.0-jre8-slim, 9-jre8-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 84fc76939453c0bec4937ae8e6fe4f1ecc0d6d19
-Directory: 9.0/jre8-slim
-
-Tags: 9.0.6-jre8-alpine, 9.0-jre8-alpine, 9-jre8-alpine
-Architectures: amd64, arm32v6, arm64v8, i386, ppc64le, s390x
-GitCommit: f4f5d57a2574e4d4c646041822ab72e6fff461e4
-Directory: 9.0/jre8-alpine
-
-Tags: 9.0.6-jre9, 9.0-jre9, 9-jre9, 9.0.6, 9.0, 9
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 84fc76939453c0bec4937ae8e6fe4f1ecc0d6d19
-Directory: 9.0/jre9
-
-Tags: 9.0.6-jre9-slim, 9.0-jre9-slim, 9-jre9-slim, 9.0.6-slim, 9.0-slim, 9-slim
-Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-GitCommit: 84fc76939453c0bec4937ae8e6fe4f1ecc0d6d19
-Directory: 9.0/jre9-slim
+Tags: 9.0.20-jdk11-slim, 9.0-jdk11-slim, 9-jdk11-slim, 9.0.20-slim, 9.0-slim, 9-slim
+Architectures: amd64, arm64v8
+GitCommit: 7eae995786f14b4e96010bcc11338724706e30eb
+Directory: 9.0/jdk11-slim

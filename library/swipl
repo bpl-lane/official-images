@@ -1,10 +1,10 @@
 Maintainers: Dave Curylo <dave@curylo.org> (@ninjarobot)
 GitRepo: https://github.com/SWI-Prolog/docker-swipl.git
-GitCommit: 41b691546a116ce357192de19798dd68a7aa8223
+GitCommit: f2abb30cffae0af6e27207dafd9e181e61abe315
 
-Tags: latest, 7.7.11
-Architectures: amd64, arm32v7
-Directory: 7.7.11/stretch
+Tags: latest, 8.1.6
+Architectures: amd64, arm32v7, arm64v8
+Directory: 8.1.6/stretch
 
-Tags: stable, 7.6.4
-Directory: 7.6.4/stretch
+Tags: stable, 8.0.0
+Directory: 8.0.0/stretch

@@ -4,7 +4,7 @@ set -e
 image="$1"
 
 haveSeccomp=
-if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null | grep -q seccomp; then
+if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null |tac|tac| grep -q seccomp; then
 	haveSeccomp=1
 
 	# get docker default seccomp profile
@@ -13,7 +13,7 @@ if docker info --format '{{ join .SecurityOptions "\n" }}' 2>/dev/null | grep -q
 	# make container with jq since it is not guaranteed on the host
 	jqImage='librarytest/mongo-basics-jq:alpine'
 	docker build -t "$jqImage" - > /dev/null <<-'EOF'
-		FROM alpine:3.5
+		FROM alpine:3.9
 
 		RUN apk add --no-cache jq
 

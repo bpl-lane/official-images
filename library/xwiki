@@ -1,18 +1,24 @@
+#MySQL is not officially supported for arm64v8.
+#Ongoing issue for the same is: https://github.com/docker-library/mysql/issues/318
 Maintainers: XWiki Core Dev Team <committers@xwiki.org> (@xwiki)
 GitRepo: https://github.com/xwiki-contrib/docker-xwiki.git
 
-Tags: 9, 9.11, 9.11.3, 9-mysql-tomcat, mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
-GitCommit: bdf1a8464a668061ba564249461633f0445e08a6
-Directory: 9/mysql-tomcat
-
-Tags: 9-postgres-tomcat, 9.11-postgres-tomcat, 9.11.3-postgres-tomcat, postgres-tomcat, lts-postgres-tomcat, lts-postgres
-GitCommit: bdf1a8464a668061ba564249461633f0445e08a6
-Directory: 9/postgres-tomcat
-
-Tags: 10, 10.2, 10-mysql-tomcat, 10.2-mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
-GitCommit: ced02a503e71cdd33a80e118a43e3d8d2983bc7e
+Tags: 10, 10.11, 10.11.8, 10-mysql-tomcat, mysql-tomcat, lts-mysql-tomcat, lts-mysql, lts
+Architectures: amd64
+GitCommit: 2e3fb7a19f326c9b49a9c08057e6962ef0b1e83a
 Directory: 10/mysql-tomcat
 
-Tags: 10-postgres-tomcat, 10.2-postgres-tomcat, stable-postgres-tomcat, stable-postgres
-GitCommit: ced02a503e71cdd33a80e118a43e3d8d2983bc7e
+Tags: 10-postgres-tomcat, 10.11-postgres-tomcat, 10.11.8-postgres-tomcat, postgres-tomcat, lts-postgres-tomcat, lts-postgres
+Architectures: amd64, arm64v8
+GitCommit: 2e3fb7a19f326c9b49a9c08057e6962ef0b1e83a
 Directory: 10/postgres-tomcat
+
+Tags: 11, 11.4, 11-mysql-tomcat, 11.4-mysql-tomcat, stable-mysql-tomcat, stable-mysql, stable, latest
+Architectures: amd64
+GitCommit: 04de95a03c648f4d498785d75d481de4bc4cabc9
+Directory: 11/mysql-tomcat
+
+Tags: 11-postgres-tomcat, 11.4-postgres-tomcat, stable-postgres-tomcat, stable-postgres
+Architectures: amd64, arm64v8
+GitCommit: 04de95a03c648f4d498785d75d481de4bc4cabc9
+Directory: 11/postgres-tomcat

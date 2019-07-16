@@ -70,8 +70,12 @@ func main() {
 
 	// TODO add "Description" to app and commands (for longer-form description of their functionality)
 
-	cli.VersionFlag.Name = "version" // remove "-v" from VersionFlag
-	cli.HelpFlag.Name = "help, h, ?" // add "-?" to HelpFlag
+	// add "-?" to HelpFlag
+	cli.HelpFlag = cli.BoolFlag{
+		Name:  "help, h, ?",
+		Usage: "show help",
+	}
+
 	app.Flags = []cli.Flag{
 		cli.BoolFlag{
 			Name:   "debug",
@@ -202,6 +206,10 @@ func main() {
 			Name:  "dry-run",
 			Usage: "do everything except the final action (for testing whether actions will be performed)",
 		},
+		"force": cli.BoolFlag{
+			Name:  "force",
+			Usage: "always push (skip the clever Hub API lookups that no-op things sooner if a push doesn't seem necessary)",
+		},
 	}
 
 	app.Commands = []cli.Command{
@@ -263,6 +271,7 @@ func main() {
 				commonFlags["uniq"],
 				commonFlags["namespace"],
 				commonFlags["dry-run"],
+				commonFlags["force"],
 			},
 			Before: subcommandBeforeFactory("push"),
 			Action: cmdPush,
@@ -274,6 +283,7 @@ func main() {
 				commonFlags["all"],
 				commonFlags["namespace"],
 				commonFlags["dry-run"],
+				commonFlags["force"],
 				cli.BoolFlag{
 					Name:  "single-arch",
 					Usage: `only act on the current architecture (for pushing "amd64/hello-world:latest", for example)`,

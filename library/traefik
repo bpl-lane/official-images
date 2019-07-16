@@ -1,26 +1,38 @@
-Maintainers: Emile Vauge <emile@vauge.com> (@emilevauge), Vincent Demeester <vincent@sbr.pm> (@vdemeester), Ludovic Fernandez <ludovic@containo.us> (@ldez), Julien Salleyron <julien@containo.us> (@juliens), Nicolas Mengin <nicolas@containo.us> (@nmengin), Michael Matur <michael@containo.us> (@mmatur)
+Maintainers: Emile Vauge <emile@vauge.com> (@emilevauge), Vincent Demeester <vincent@sbr.pm> (@vdemeester), Ludovic Fernandez <ludovic@containo.us> (@ldez), Julien Salleyron <julien@containo.us> (@juliens), Nicolas Mengin <nicolas@containo.us> (@nmengin), Michael Matur <michael@containo.us> (@mmatur), Damien Duportal <damien@containo.us> (@dduportal)
 GitRepo: https://github.com/containous/traefik-library-image.git
 
-Tags: v1.6.0-rc3, 1.6.0-rc3, v1.6, 1.6, tetedemoine
+Tags: v2.0.0-alpha4, 2.0.0-alpha4, v2.0, 2.0, faisselle
 Architectures: amd64, arm64v8, arm32v6
-GitCommit: 3bee4eda5016f93e9b497a306df98d62341acf16
+GitCommit: 443c6cee375ea3e2436b117df8535f05e9854385
 amd64-Directory: scratch/amd64
 arm32v6-Directory: scratch/arm
 arm64v8-Directory: scratch/arm64
 
-Tags: v1.6.0-rc3-alpine, 1.6.0-rc3-alpine, v1.6-alpine, 1.6-alpine, tetedemoine-alpine
+Tags: v2.0.0-alpha4-alpine, 2.0.0-alpha4-alpine, v2.0-alpine, 2.0-alpine, faisselle-alpine
 Architectures: amd64, arm64v8, arm32v6
-GitCommit: 3bee4eda5016f93e9b497a306df98d62341acf16
+GitCommit: 443c6cee375ea3e2436b117df8535f05e9854385
 Directory: alpine
 
-Tags: v1.5.4, 1.5.4, v1.5, 1.5, cancoillotte, latest
+Tags: v2.0.0-alpha4-nanoserver, 2.0.0-alpha4-nanoserver, v2.0-nanoserver, 2.0-nanoserver, faisselle-nanoserver, v2.0.0-alpha4-nanoserver-sac2016, 2.0.0-alpha4-nanoserver-sac2016, v2.0-nanoserver-sac2016, 2.0-nanoserver-sac2016, faisselle-nanoserver-sac2016
+Architectures: windows-amd64
+GitCommit: 443c6cee375ea3e2436b117df8535f05e9854385
+Directory: windows
+Constraints: nanoserver-sac2016
+
+Tags: v1.7.12, 1.7.12, v1.7, 1.7, maroilles, latest
 Architectures: amd64, arm32v6, arm64v8
-GitCommit: a0b61256a1c3df401f43cf01b940f3a69fb77883
+GitCommit: 8c0a8508ea75d5a491abadb7fc5bfa33b2beb3d7
 amd64-Directory: scratch/amd64
 arm32v6-Directory: scratch/arm
 arm64v8-Directory: scratch/arm64
 
-Tags: v1.5.4-alpine, 1.5.4-alpine, v1.5-alpine, 1.5-alpine, cancoillotte-alpine, alpine
+Tags: v1.7.12-alpine, 1.7.12-alpine, v1.7-alpine, 1.7-alpine, maroilles-alpine, alpine
 Architectures: amd64, arm32v6, arm64v8
-GitCommit: a0b61256a1c3df401f43cf01b940f3a69fb77883
+GitCommit: 8c0a8508ea75d5a491abadb7fc5bfa33b2beb3d7
 Directory: alpine
+
+Tags: v1.7.12-nanoserver, 1.7.12-nanoserver, v1.7-nanoserver, 1.7-nanoserver, maroilles-nanoserver, v1.7.11-nanoserver-sac2016, 1.7.11-nanoserver-sac2016, v1.7-nanoserver-sac2016, 1.7-nanoserver-sac2016, maroilles-nanoserver-sac2016, nanoserver, nanoserver-sac2016
+Architectures: windows-amd64
+GitCommit: 8c0a8508ea75d5a491abadb7fc5bfa33b2beb3d7
+Directory: windows
+Constraints: nanoserver-sac2016

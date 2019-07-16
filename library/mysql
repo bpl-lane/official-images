@@ -1,21 +1,17 @@
-# this file is generated via https://github.com/docker-library/mysql/blob/87a7e96edc3c995a57dc2a4c23c0e32b75c4aaa5/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/mysql/blob/ff627942605ce08a32fa527993337df0e9856760/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/mysql.git
 
-Tags: 8.0.4-rc, 8.0.4, 8.0, 8
-GitCommit: ad625c64a06e16683e997e5a0147508d115f4989
+Tags: 8.0.16, 8.0, 8, latest
+GitCommit: 3362baccb4352bcf0022014f67c1ec7e6808b8c5
 Directory: 8.0
 
-Tags: 5.7.21, 5.7, 5, latest
-GitCommit: ad625c64a06e16683e997e5a0147508d115f4989
+Tags: 5.7.26, 5.7, 5
+GitCommit: 26380f33a0fcd07dda35e37516eb24eaf962845c
 Directory: 5.7
 
-Tags: 5.6.39, 5.6
-GitCommit: f279c9cc0d20407a2c4d9465adae6b077dcf1b51
+Tags: 5.6.44, 5.6
+GitCommit: 38510a26f56f429817da7cabf5c772756faa5e55
 Directory: 5.6
-
-Tags: 5.5.59, 5.5
-GitCommit: f279c9cc0d20407a2c4d9465adae6b077dcf1b51
-Directory: 5.5

@@ -1,12 +1,10 @@
-FROM golang:1.9-alpine
+FROM golang:1.12-alpine3.9
 
 RUN apk add --no-cache \
 		file \
-		gnupg \
-		libressl
+		gnupg
 
 WORKDIR /usr/src/bashbrew
-ENV GOPATH /usr/src/bashbrew:/usr/src/bashbrew/vendor
 ENV CGO_ENABLED 0
 
 ENV BASHBREW_ARCHES \
@@ -24,14 +22,14 @@ ENV BASHBREW_ARCHES \
 COPY .bashbrew-arch-to-goenv.sh /usr/local/bin/
 
 # https://github.com/estesp/manifest-tool/releases
-ENV MANIFEST_TOOL_VERSION 0.7.0
+ENV MANIFEST_TOOL_VERSION 1.0.0-rc
 # gpg: key 0F386284C03A1162: public key "Philip Estes <estesp@gmail.com>" imported
 ENV MANIFEST_TOOL_GPG_KEY 27F3EA268A97867EAF0BD05C0F386284C03A1162
 
 RUN set -euxo pipefail; \
 	\
 	export GNUPGHOME="$(mktemp -d)"; \
-	gpg --keyserver ha.pool.sks-keyservers.net --recv-keys "$MANIFEST_TOOL_GPG_KEY"; \
+	gpg --batch --keyserver ha.pool.sks-keyservers.net --recv-keys "$MANIFEST_TOOL_GPG_KEY"; \
 	\
 	mkdir -p bin; \
 	\
@@ -51,7 +49,8 @@ RUN set -euxo pipefail; \
 		) \
 	done; \
 	\
-	rm -rf "$GNUPGHOME"; \
+	gpgconf --kill all; \
+	rm -r "$GNUPGHOME"; \
 	\
 	ls -lAFh bin/manifest-tool-*; \
 	file bin/manifest-tool-*
@@ -73,7 +72,8 @@ RUN set -euxo pipefail; \
 				-ldflags '-s -w' \
 				-tags netgo -installsuffix netgo \
 				-o "$targetBin" \
-				./src/bashbrew \
+				-mod vendor \
+				bashbrew/src/bashbrew \
 			; \
 			ls -lAFh "$targetBin"; \
 			file "$targetBin"; \

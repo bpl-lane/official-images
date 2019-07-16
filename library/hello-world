@@ -1,38 +1,38 @@
-# this file is generated via https://github.com/docker-library/hello-world/blob/d206a435163e171e629490b2803b2615b3831906/generate-stackbrew-library.sh
+# this file is generated via https://github.com/docker-library/hello-world/blob/88475d7d4cfb43feda2b74a5bfdaf5ff8f964fb1/generate-stackbrew-library.sh
 
 Maintainers: Tianon Gravi <admwiggin@gmail.com> (@tianon),
              Joseph Ferguson <yosifkit@gmail.com> (@yosifkit)
 GitRepo: https://github.com/docker-library/hello-world.git
-GitCommit: d206a435163e171e629490b2803b2615b3831906
+GitCommit: 88475d7d4cfb43feda2b74a5bfdaf5ff8f964fb1
 
 Tags: linux
 SharedTags: latest
 Architectures: amd64, arm32v5, arm32v7, arm64v8, i386, ppc64le, s390x
-amd64-GitCommit: c83a065a24e94e635ddd518c2a3cffc91accf30d
+amd64-GitCommit: b715c35271f1d18832480bde75fe17b93db26414
 amd64-Directory: amd64/hello-world
-arm32v5-GitCommit: c83a065a24e94e635ddd518c2a3cffc91accf30d
+arm32v5-GitCommit: b715c35271f1d18832480bde75fe17b93db26414
 arm32v5-Directory: arm32v5/hello-world
-arm32v7-GitCommit: c83a065a24e94e635ddd518c2a3cffc91accf30d
+arm32v7-GitCommit: b715c35271f1d18832480bde75fe17b93db26414
 arm32v7-Directory: arm32v7/hello-world
-arm64v8-GitCommit: c83a065a24e94e635ddd518c2a3cffc91accf30d
+arm64v8-GitCommit: b715c35271f1d18832480bde75fe17b93db26414
 arm64v8-Directory: arm64v8/hello-world
-i386-GitCommit: c83a065a24e94e635ddd518c2a3cffc91accf30d
+i386-GitCommit: f7fe37d6506b67d1e650e0bbcc5d608e101e3bb7
 i386-Directory: i386/hello-world
-ppc64le-GitCommit: c83a065a24e94e635ddd518c2a3cffc91accf30d
+ppc64le-GitCommit: b715c35271f1d18832480bde75fe17b93db26414
 ppc64le-Directory: ppc64le/hello-world
-s390x-GitCommit: c83a065a24e94e635ddd518c2a3cffc91accf30d
+s390x-GitCommit: b715c35271f1d18832480bde75fe17b93db26414
 s390x-Directory: s390x/hello-world
 
-Tags: nanoserver-sac2016
+Tags: nanoserver-1803
 SharedTags: nanoserver, latest
 Architectures: windows-amd64
-windows-amd64-GitCommit: d206a435163e171e629490b2803b2615b3831906
-windows-amd64-Directory: amd64/hello-world/nanoserver-sac2016
-Constraints: nanoserver-sac2016
+windows-amd64-GitCommit: 9c93e37114a7fe99b5fc0d776e0b8dff99cbbb75
+windows-amd64-Directory: amd64/hello-world/nanoserver-1803
+Constraints: nanoserver-1803
 
-Tags: nanoserver-1709
+Tags: nanoserver-1809
 SharedTags: nanoserver, latest
 Architectures: windows-amd64
-windows-amd64-GitCommit: d206a435163e171e629490b2803b2615b3831906
-windows-amd64-Directory: amd64/hello-world/nanoserver-1709
-Constraints: nanoserver-1709
+windows-amd64-GitCommit: 9c93e37114a7fe99b5fc0d776e0b8dff99cbbb75
+windows-amd64-Directory: amd64/hello-world/nanoserver-1809
+Constraints: nanoserver-1809

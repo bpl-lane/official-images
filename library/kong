@@ -2,12 +2,65 @@ Maintainers: Kong Docker Maintainers <support@konghq.com> (@thekonginc)
 GitRepo: https://github.com/Kong/docker-kong.git
 # needs "Constraints" to match "centos" (which this image is "FROM")
 
-Tags: 0.13.0-alpine, 0.13.0, latest
-GitCommit: 914bba64bc7e1580b0e7e64e082459ca0c4e7eb7
+Tags: 1.2.0rc2-alpine, 1.2.0rc2, 1.2rc2
+GitCommit: 919042d0390582c4e50a4d0cb699923aa1b29a92
+GitFetch: refs/tags/1.2.0rc2
 Directory: alpine
 
-Tags: 0.13.0-centos
-GitCommit: 914bba64bc7e1580b0e7e64e082459ca0c4e7eb7
+Tags: 1.2.0rc2-centos, 1.2rc2-centos
+GitCommit: 919042d0390582c4e50a4d0cb699923aa1b29a92
+GitFetch: refs/tags/1.2.0rc2
+Constraints: !aufs
+Directory: centos
+
+Tags: 1.1.2-alpine, 1.1.2, 1.1, latest
+GitCommit: bb4efafd0e2272be1c27b9aa2de60cd0022a3fad
+GitFetch: refs/tags/1.1.2
+Directory: alpine
+
+Tags: 1.1.2-centos, 1.1-centos
+GitCommit: bb4efafd0e2272be1c27b9aa2de60cd0022a3fad
+GitFetch: refs/tags/1.1.2
+Constraints: !aufs
+Directory: centos
+
+Tags: 1.0.3-alpine, 1.0.3, 1.0
+GitCommit: 61ca745bf9ae97af6d950dace81680a855b96a45
+GitFetch: refs/tags/1.0.3
+Directory: alpine
+
+Tags: 1.0.3-centos, 1.0-centos
+GitCommit: 61ca745bf9ae97af6d950dace81680a855b96a45
+GitFetch: refs/tags/1.0.3
+Constraints: !aufs
+Directory: centos
+
+Tags: 0.15.0-alpine, 0.15-alpine, 0.15.0, 0.15
+GitCommit: 7b766824d850af001d0c6c7a0ecbaced4522d575
+GitFetch: refs/tags/0.15.0
+Directory: alpine
+
+Tags: 0.15.0-centos, 0.15-centos
+GitCommit: 7b766824d850af001d0c6c7a0ecbaced4522d575
+GitFetch: refs/tags/0.15.0
+Constraints: !aufs
+Directory: centos
+
+Tags: 0.14.1-alpine, 0.14-alpine, 0.14.1, 0.14
+GitCommit: 9bbc9e8b4a61cba5cc4e4e4562a802dace4348ff
+Directory: alpine
+
+Tags: 0.14.1-centos, 0.14-centos
+GitCommit: 9bbc9e8b4a61cba5cc4e4e4562a802dace4348ff
+Constraints: !aufs
+Directory: centos
+
+Tags: 0.13.1-alpine, 0.13-alpine, 0.13.1, 0.13
+GitCommit: 6e2035c5739482f0616021a7eda04ec6809d9f3e
+Directory: alpine
+
+Tags: 0.13.1-centos, 0.13-centos
+GitCommit: 6e2035c5739482f0616021a7eda04ec6809d9f3e
 Constraints: !aufs
 Directory: centos
 
